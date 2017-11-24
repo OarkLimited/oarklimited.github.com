@@ -1,0 +1,109 @@
+﻿@font-face {
+    font-family: "Harabara Bold";
+    src: url("/css/fonts/ProductSans-Regular.ttf") format('truetype');
+}
+
+$black: #000 !default;
+$white: #fff !default;
+$light: #d46a6a !default;
+$medium: #933131 !default;
+$dark: #561514 !default;
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    font-family: Product Sans;
+    background: $medium; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, $light, $medium, $dark); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, $light, $medium, $dark); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, $light, $medium, $dark); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, $light, $medium, $dark); /* Standard syntax */
+}
+
+//https://css-tricks.com/international-box-sizing-awareness-day/
+*, *:before, *:after {
+    /* Chrome 9-, Safari 5-, iOS 4.2-, Android 3-, Blackberry 7- */
+    -webkit-box-sizing: border-box;
+    /* Firefox (desktop or Android) 28- */
+    -moz-box-sizing: border-box;
+    /* Firefox 29+, IE 8+, Chrome 10+, Safari 5.1+, Opera 9.5+, iOS 5+, Opera Mini Anything, Blackberry 10+, Android 4+ */
+    box-sizing: border-box;
+}
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+    display: table;
+
+    .wrapper-cell {
+        display: table-cell;
+        width: 50%;
+    }
+
+    .big-logo {
+        display: table;
+        height: 100%;
+        width: 100%;
+
+        .img-wrapper {
+            display: table-cell;
+            vertical-align: middle;
+
+            img {
+                display: block;
+                margin: auto;
+                width: 25%;
+            }
+
+            h1 {
+                text-align: center;
+                font-weight: 700;
+                font-size: 48px;
+                color: #ffffff;
+                line-height: 1.00em;
+                margin: 8px auto 8px auto;
+            }
+
+            h2 {
+                font-family: 'Pacifico';
+                font-weight: 400;
+                font-size: 28px;
+                color: #ffffff;
+                line-height: 1.00em;
+                text-align: center;
+            }
+        }
+    }
+
+    .description {
+        color: $white;
+        background: rgba($black, 0.7);
+        display: table;
+        height: 100%;
+        width: 100%;
+
+        .description-wrapper {
+            display: table-cell;
+            vertical-align: middle;
+
+            .headline {
+                font-family: 'Pacifico';
+                font-weight: 400;
+                font-size: 48px;
+                color: #ffffff;
+                line-height: 1.00em;
+                text-align: center;
+            }
+
+            .form {
+                margin: 50px auto 0 auto;
+                display: table;
+                .button{
+                    background:transparent;
+                }
+            }
+        }
+    }
+}
