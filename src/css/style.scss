@@ -96,11 +96,18 @@ html, body {
                 text-align: center;
             }
 
+            .more-info {
+                margin: 40px 0 40px 0;
+                text-align: center;
+                padding: 0 20px;
+            }
+
             .form {
-                margin: 50px auto 0 auto;
+                margin: 0 auto 0 auto;
                 display: table;
-                .button{
-                    background:transparent;
+
+                .button {
+                    background: transparent;
                 }
             }
         }
@@ -123,10 +130,14 @@ html, body {
             padding: 10px 0 20px 0;
 
             .description-wrapper {
+                .more-info {
+                    margin: 30px 0 30px 0;
+                    text-align: center;
+                    padding: 0 15px;
+                }
 
                 .form {
                     margin: 25px auto 0 auto;
-                    
                 }
             }
         }
