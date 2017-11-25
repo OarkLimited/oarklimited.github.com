@@ -45,7 +45,8 @@ gulp.task('copy:node_modules', ['clean:node_modules'], function (cb) {
     var node_modules = {
         "jquery": ["./node_modules/jquery/dist/jquery.min.js"],
         "font-awesome": ["./node_modules/font-awesome/*css/font-awesome.min.css", "./node_modules/font-awesome/*fonts/**"],
-        "bootstrap": ["./node_modules/bootstrap/dist/css/bootstrap.min.css", "./node_modules/bootstrap/dist/js/bootstrap.min.js", "./node_modules/tether/dist/css/tether.min.css", "./node_modules/tether/dist/js/tether.min.js"]
+        "bootstrap": ["./node_modules/bootstrap/dist/css/bootstrap.min.css", "./node_modules/bootstrap/dist/js/bootstrap.min.js", "./node_modules/tether/dist/css/tether.min.css", "./node_modules/tether/dist/js/tether.min.js"],
+        "include-media": ["./node_modules/include-media/dist/_include-media.scss"]
     };
 
     for (var destinationDir in node_modules) {

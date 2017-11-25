@@ -1,8 +1,6 @@
-﻿@font-face {
-    font-family: "Harabara Bold";
-    src: url("/css/fonts/ProductSans-Regular.ttf") format('truetype');
-}
+﻿@import "../../vendors/include-media/_include-media.scss";
 
+$breakpoints: ( 'xs': 0, 'sm': 576px, 'md': 768px, 'lg': 992px, 'xl': 1200px );
 $black: #000 !default;
 $white: #fff !default;
 $light: #d46a6a !default;
@@ -13,7 +11,8 @@ html, body {
     height: 100%;
     width: 100%;
     margin: 0;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
     font-family: Product Sans;
     background: $medium; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(left, $light, $medium, $dark); /* For Safari 5.1 to 6.0 */
@@ -79,7 +78,7 @@ html, body {
 
     .description {
         color: $white;
-        background: rgba($black, 0.7);
+        background: rgba($black, 0.5);
         display: table;
         height: 100%;
         width: 100%;
@@ -102,6 +101,32 @@ html, body {
                 display: table;
                 .button{
                     background:transparent;
+                }
+            }
+        }
+    }
+}
+
+
+@include media("<sm") {
+    .wrapper {
+        .wrapper-cell {
+            display: table-row;
+            width: 100%;
+        }
+
+        .big-logo {
+            padding: 20px 0 20px 0;
+        }
+
+        .description {
+            padding: 10px 0 20px 0;
+
+            .description-wrapper {
+
+                .form {
+                    margin: 25px auto 0 auto;
+                    
                 }
             }
         }
