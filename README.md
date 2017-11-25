@@ -7,7 +7,7 @@
 - Responsive
     <br/> Desktop Layout Image
     ![Desktop Layout Image](Solution%20Items/screencapture-oarklimited-desktop.png?raw=true "Desktop Layout Image")
-    <hr/> Mobile Layout Image <br/>
+    <br/> Mobile Layout Image <br/>
     ![Mobile Layout Image](Solution%20Items/screencapture-oarklimited-mobile.png?raw=true "Mobile Layout Image")
 - Chat ~ Powered by [tawk.to](https://tawk.to)
 - Subscribe ~ Powered by [MailChimp](https://mailchimp.com/)
