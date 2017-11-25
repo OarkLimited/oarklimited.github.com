@@ -24,6 +24,12 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "oarklimited.github.io", "."
 		SlnRelativePath = "..\oarklimited.github.io\"
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8DFB26E0-7B9E-4C97-9CCD-CEDF88471BCA}"
+	ProjectSection(SolutionItems) = preProject
+		Solution Items\screencapture-oarklimited-desktop.png = Solution Items\screencapture-oarklimited-desktop.png
+		Solution Items\screencapture-oarklimited-mobile.png = Solution Items\screencapture-oarklimited-mobile.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
