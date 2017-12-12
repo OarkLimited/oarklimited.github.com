@@ -1,8 +1,9 @@
 {
-  "name": "Oark Website",
   "version": "1.0.0",
+  "name": "asp.net",
   "private": true,
   "devDependencies": {
+    "bootstrap": "4.0.0-alpha.6",
     "font-awesome": "4.7.0",
     "gulp": "3.9.1",
     "gulp-concat": "2.6.1",
@@ -11,13 +12,12 @@
     "gulp-filter": "5.0.1",
     "gulp-htmlmin": "3.0.0",
     "gulp-if": "2.0.2",
+    "gulp-nunjucks-render": "2.2.1",
     "gulp-rcs": "1.1.0",
     "gulp-sass": "3.1.0",
     "gulp-uglify": "3.0.0",
     "gulp-util": "3.0.8",
     "include-media": "1.4.9",
-    "jquery": "3.2.1",
-    "bootstrap": "4.0.0-alpha.6",
-    "gulp-nunjucks-render": "2.2.1"
+    "jquery": "3.2.1"
   }
 }

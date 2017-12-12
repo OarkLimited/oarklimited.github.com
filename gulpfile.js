@@ -22,7 +22,7 @@ var gulp = require("gulp"),
     filter = require('gulp-filter'),
     htmlmin = require('gulp-htmlmin'),
     rcs = require('gulp-rcs'),
-    nunjucksRender = require('gulp-nunjucks-render');
+    nunjucksRender = require('gulp-nunjucks-render'); //https://zellwk.com/blog/nunjucks-with-gulp/
 
 
 var paths = {
@@ -32,8 +32,6 @@ var paths = {
 paths.vendors = paths.webroot + "vendors/";
 paths.src = paths.webroot + "src/";
 paths.dest = paths.webroot + "";
-
-
 
 
 gulp.task('clean:node_modules', function (cb) {
@@ -61,10 +59,10 @@ gulp.task('build:app', function (cb) {
     let jsFilter = filter('**/*.js', { restore: true });
     let cssFilter = filter('**/*.css', { restore: true });
     let sassFilter = filter('**/*.scss', { restore: true });
-    let htmlTemplateFilter = filter('**/*.nunjucks.html', { restore: true });
+    let htmlTemplateFilter = filter('**/*.html', { restore: true });
     let htmlFilter = filter('**/*.html', { restore: true });
 
-    gulp.src(paths.src + '**')
+    gulp.src([paths.src + '**', '!./src/templates/**', '!./src/templates/'])
 
         //Compile SASS
         .pipe(sassFilter)
@@ -79,7 +77,7 @@ gulp.task('build:app', function (cb) {
         //TEMPATING HTML
         .pipe(htmlTemplateFilter)
         .pipe(nunjucksRender({
-            //path: ['app/templates']
+            path: [paths.src + '/templates/'] // String or Array
         }))
         .pipe(htmlTemplateFilter.restore)
 
@@ -88,7 +86,7 @@ gulp.task('build:app', function (cb) {
         .pipe(htmlmin({
             collapseWhitespace: true,
             minifyJS: true,
-            minifyCSS: true,
+            minifyCSS: true
             ////https://stackoverflow.com/a/23695535
             //ignoreCustomComments: [
             //    /^!--.*?--/
