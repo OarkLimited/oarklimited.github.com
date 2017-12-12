@@ -21,7 +21,8 @@ var gulp = require("gulp"),
     gulpif = require('gulp-if'),
     filter = require('gulp-filter'),
     htmlmin = require('gulp-htmlmin'),
-    rcs = require('gulp-rcs');
+    rcs = require('gulp-rcs'),
+    nunjucksRender = require('gulp-nunjucks-render');
 
 
 var paths = {
@@ -60,6 +61,7 @@ gulp.task('build:app', function (cb) {
     let jsFilter = filter('**/*.js', { restore: true });
     let cssFilter = filter('**/*.css', { restore: true });
     let sassFilter = filter('**/*.scss', { restore: true });
+    let htmlTemplateFilter = filter('**/*.nunjucks.html', { restore: true });
     let htmlFilter = filter('**/*.html', { restore: true });
 
     gulp.src(paths.src + '**')
@@ -73,6 +75,13 @@ gulp.task('build:app', function (cb) {
         .pipe(cssFilter)
         .pipe(cssmin())
         .pipe(cssFilter.restore)
+
+        //TEMPATING HTML
+        .pipe(htmlTemplateFilter)
+        .pipe(nunjucksRender({
+            //path: ['app/templates']
+        }))
+        .pipe(htmlTemplateFilter.restore)
 
         //Minify HTML
         .pipe(htmlFilter)
