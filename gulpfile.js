@@ -59,10 +59,9 @@ gulp.task('build:app', function (cb) {
     let jsFilter = filter('**/*.js', { restore: true });
     let cssFilter = filter('**/*.css', { restore: true });
     let sassFilter = filter('**/*.scss', { restore: true });
-    let htmlTemplateFilter = filter('**/*.html', { restore: true });
     let htmlFilter = filter('**/*.html', { restore: true });
 
-    gulp.src([paths.src + '**', '!./src/templates/**', '!./src/templates/'])
+    gulp.src([paths.src + '**', '!./src/templates/'])
 
         //Compile SASS
         .pipe(sassFilter)
@@ -74,12 +73,7 @@ gulp.task('build:app', function (cb) {
         .pipe(cssmin())
         .pipe(cssFilter.restore)
 
-        //TEMPATING HTML
-        .pipe(htmlTemplateFilter)
-        .pipe(nunjucksRender({
-            path: [paths.src + '/templates/'] // String or Array
-        }))
-        .pipe(htmlTemplateFilter.restore)
+       
 
         //Minify HTML
         .pipe(htmlFilter)
