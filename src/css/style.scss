@@ -3,9 +3,9 @@
 $breakpoints: ( 'xs': 0, 'sm': 576px, 'md': 768px, 'lg': 992px, 'xl': 1200px );
 $black: #000 !default;
 $white: #fff !default;
-$light: #d46a6a !default;
+$light: #b4d0e7 !default;// #d46a6a !default;
 $medium: #933131 !default;
-$dark: #561514 !default;
+$dark: #61082b !default; // #561514 !default;
 $gray: #eee !default;
 
 html, body {
@@ -16,10 +16,10 @@ html, body {
     overflow-y: hidden;
     font-family: Product Sans;
     background: $medium; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(left, $light, $medium, $dark); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(right, $light, $medium, $dark); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(right, $light, $medium, $dark); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to right, $light, $medium, $dark); /* Standard syntax */
+    background: -webkit-linear-gradient(left, $medium, $dark); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, $medium, $dark); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, $medium, $dark); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, $medium, $dark); /* Standard syntax */
 }
 
 //https://css-tricks.com/international-box-sizing-awareness-day/
@@ -99,7 +99,7 @@ body {
 
     .description {
         flex: 1;
-        background: rgba($black, 0.5);
+        background: rgba($black, 0.3);
         height: 100%;
         overflow-x: hidden;
         overflow-y: auto;
@@ -172,6 +172,30 @@ body {
                 }
             }
         }
+
+        .services {
+            margin: 0 0 50px;
+
+            .service {
+                align-items: center;
+                color: inherit;
+                text-decoration: none;
+                display: block;
+                cursor: default;
+
+                .name {
+                    margin: 10px 0 0;
+                }
+
+                .para {
+                    margin: 5px 0 0;
+                }
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid $light;
+                }
+            }
+        }
         /*.team-members {
             display: flex;
             justify-content: space-around;
@@ -241,7 +265,7 @@ body {
         .contact-numbers {
             display: flex;
             justify-content: space-around;
-            flex-wrap:wrap;
+            flex-wrap: wrap;
             width: 100%;
             margin: 0 0 40px;
 
@@ -362,7 +386,7 @@ body {
             display: block;
             width: 100%;
             height: auto;
-            background: rgba($black, 0.5);
+            background: rgba($black, 0.3);
             height: auto;
             overflow: hidden;
             padding: 0 20px;
